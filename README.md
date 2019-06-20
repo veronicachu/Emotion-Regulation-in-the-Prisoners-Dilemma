@@ -1,4 +1,5 @@
 # Emotion Regulation in the Prisoner’s Dilemma: Effects of Reappraisal on Behavioral Measures and Cardiovascular Measures of Challenge and Threat
+## Statistical Analyses on Physiological Data (R)
 ### USC Institute of Creative Technologies
 
 ### Author: Veronica C. Chu
