@@ -14,35 +14,38 @@ t.test(VCdata.reg$vcvals.1)
 t.test(HRdata.ctrl$hrvals.1)
 t.test(HRdata.reg$hrvals.1)
 
-# regulation x smile
-# VCdata.ctrlpolite <- subset(VCdata, VCdata$regulation == "Control" & VCdata$cluster == 1)
-# VCdata.ctrlamused <- subset(VCdata, VCdata$regulation == "Control" & VCdata$cluster == 2)
-# 
-# VCdata.regpolite <- subset(VCdata, VCdata$regulation == "Regulation" & VCdata$cluster == 1)
-# VCdata.regamused <- subset(VCdata, VCdata$regulation == "Regulation" & VCdata$cluster == 2)
-# 
-# HRdata.ctrlpolite <- subset(HRdata, HRdata$regulation == "Control" & HRdata$cluster == 1)
-# HRdata.ctrlamused <- subset(HRdata, HRdata$regulation == "Control" & HRdata$cluster == 2)
-# 
-# HRdata.regpolite <- subset(HRdata, HRdata$regulation == "Regulation" & HRdata$cluster == 1)
-# HRdata.regamused <- subset(HRdata, HRdata$regulation == "Regulation" & HRdata$cluster == 2)
-# 
-# t.test(VCdata.ctrlpolite$vcvals.1)
-# t.test(VCdata.ctrlamused$vcvals.1)
-# 
-# t.test(VCdata.regpolite$vcvals.1)
-# t.test(VCdata.regamused$vcvals.1)
-# 
-# t.test(HRdata.ctrlpolite$hrvals.1)
-# t.test(HRdata.ctrlamused$hrvals.1)
-# 
-# t.test(HRdata.regpolite$hrvals.1)
-# t.test(HRdata.regamused$hrvals.1)
+# subset regulation x smile
+VCdata.ctrlamused <- subset(VCdata, VCdata$regulation == "Control" & VCdata$cluster == 2)
+HRdata.ctrlamused <- subset(HRdata, HRdata$regulation == "Control" & HRdata$cluster == 2)
+
+VCdata.ctrlpolite <- subset(VCdata, VCdata$regulation == "Control" & VCdata$cluster == 1)
+HRdata.ctrlpolite <- subset(HRdata, HRdata$regulation == "Control" & HRdata$cluster == 1)
+
+VCdata.regamused <- subset(VCdata, VCdata$regulation == "Regulation" & VCdata$cluster == 2)
+HRdata.regamused <- subset(HRdata, HRdata$regulation == "Regulation" & HRdata$cluster == 2)
+
+VCdata.regpolite <- subset(VCdata, VCdata$regulation == "Regulation" & VCdata$cluster == 1)
+HRdata.regpolite <- subset(HRdata, HRdata$regulation == "Regulation" & HRdata$cluster == 1)
+
+# run t-test
+t.test(VCdata.ctrlamused$vcvals.1)
+t.test(HRdata.ctrlamused$hrvals.1)
+
+t.test(VCdata.ctrlpolite$vcvals.1)
+t.test(HRdata.ctrlpolite$hrvals.1)
+
+t.test(VCdata.regamused$vcvals.1)
+t.test(HRdata.regamused$hrvals.1)
+
+t.test(VCdata.regpolite$vcvals.1)
+t.test(HRdata.regpolite$hrvals.1)
+
 
 # MANOVA ------------------------------------------------------------------
 condition <- TPRdata$regulation
 auth <- TPRdata$auth.rating
 cluster <- TPRdata$cluster
+#gender <- TPRdata$gender
 
 # Round 1
 Y <- cbind(TPRdata$tprvals.1,VCdata$vcvals.1,COdata$covals.1)

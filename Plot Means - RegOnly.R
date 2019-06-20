@@ -1,4 +1,4 @@
-load("~/R/Split-Steal Project/Working Data/RemovedOutliers_R1_auth(raw).RData")
+load("~/R/Split-Steal Project/Working Data/RemovedOutliers_R1_auth(HL).RData")
 
 # Group Data --------------------------------------------------------------
 

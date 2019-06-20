@@ -68,6 +68,13 @@ title(ylab = "Index Value", cex.lab = 1.2, line = 2.5)
 
 
 
+# unidata.ctrl <- subset(unitaryR1, TPRdata$regulation == "Control")
+# unidata.reg <- subset(unitaryR1, TPRdata$regulation == "Regulation")
+# munictrl <- mean(unidata.ctrl)
+# munireg <- mean(unidata.reg)
+# barplot(matrix(c(munictrl,munireg)), names.arg = names, main = "Challenge/Threat Index", ylab = "", ylim = c(-1,1),
+#         cex.names = 1.2, cex.main = 1.2, beside = TRUE, col = grey(0.7))
+# title(ylab = "Index Value", cex.lab = 1.2, line = 2.5)
 
 
 
